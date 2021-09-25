@@ -11,7 +11,7 @@ public class QueueLinkedListApp {
         q.enqueue(40);
         q.enqueue(50);
         q.dequeue();
-        System.out.println("Queue Front : " + q.depan.key);
-        System.out.println("Queue Rear : " + q.belakang.key);
+        System.out.println("Queue Depan : " + q.depan.key);
+        System.out.println("Queue Belakang : " + q.belakang.key);
     }
 }

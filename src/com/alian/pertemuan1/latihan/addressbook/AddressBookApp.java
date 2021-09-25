@@ -28,9 +28,11 @@ public class AddressBookApp {
                     }
                     break;
                 case 2:
-                    System.out.println("Masukan nama yang ingin di hapus : ");
+                    System.out.print("Masukan nama yang ingin di hapus : ");
                     String name = keyboard.nextLine();
-                    addressBook.hapusKontak(name);
+                    if (name != null) {
+                        addressBook.hapusKontak(name);
+                    }
                     break;
                 case 3:
                     System.out.println("Jumlah ada " + addressBook.jumlahKontak() + " kontak");
@@ -38,6 +40,9 @@ public class AddressBookApp {
                 case 4:
                     addressBook.tampilkanKontak();
                     break;
+                case 6:
+                    Contact ali = new Contact("name", 20, 1234);
+                    addressBook.tambahKontakQueue(ali);
                 default:
                     System.out.println("pilihan tidak valid");
             }

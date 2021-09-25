@@ -17,7 +17,8 @@ public class ArrayListDemo {
         while (li.hasNext())
             System.out.println(li.next());
         Object a[] = al.toArray();
-        for (int i=0; i<a.length; i++)
+        for (int i = 0; i < a.length; i++) {
             System.out.println(a[i]);
+        }
     }
 }

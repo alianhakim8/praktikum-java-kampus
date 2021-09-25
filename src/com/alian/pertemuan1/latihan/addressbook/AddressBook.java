@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 public class AddressBook {
     private ArrayList<Contact> contacts;
+    private static Contact[] contactsArr;
+    private int kapasitas, belakang, depan;
+
 
     public AddressBook() {
         contacts = new ArrayList<>();
@@ -11,6 +14,19 @@ public class AddressBook {
 
     public void tambahKontak(Contact c) {
         contacts.add(c);
+    }
+
+    // tambah kontak dengan queue
+    public void tambahKontakQueue(Contact con) {
+        kapasitas = 5;
+        // jika queue penuh
+        if (belakang == kapasitas) {
+            System.out.println("Queue Penuh !");
+        } else {
+            // tambah elemen ke dalam queue
+            contactsArr[belakang] = con;
+            belakang++;
+        }
     }
 
     public void tampilkanKontak() {
@@ -42,4 +58,16 @@ public class AddressBook {
             contacts.remove(posisi);
         }
     }
+
+//    // hapus kontak dengan stack
+//    public Contact hapusKontakStack() {
+//        Contact temp;
+//        if (belakang >= 0) {
+//            temp = contactsArr[belakang];
+//            belakang--;
+//        } else {
+//            System.out.println(-1);
+//        }
+//        return temp;
+//    }
 }
