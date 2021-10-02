@@ -11,7 +11,6 @@ public class DynamicIntStack {
         }
     }
 
-
     void push(int n){
         /* no need to check for overflow */
         IntStackNode node = new IntStackNode(n);
@@ -35,6 +34,8 @@ public class DynamicIntStack {
         DynamicIntStack myStack = new DynamicIntStack();
         myStack.push(5);
         myStack.push(10);
+        myStack.push(24);
+        myStack.push(40);
         /* mencetak elemen dari stack */
         IntStackNode currNode = myStack.top;
         while (currNode!=null) {

@@ -21,9 +21,9 @@ public class LinkedListDemo {
         System.out.println(list);
         list.remove(new Integer(1));
         System.out.println(list);
-        list.remove(3);
+        list.remove(2);
         System.out.println(list);
-        list.set(2, "one");
+        list.set(0, "one");
         System.out.println(list);
     }
 }

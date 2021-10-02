@@ -22,6 +22,7 @@ public class SeqStack {
             memSpace[top] = value;
         } else {
             top--;
+            System.out.println("stack penuh");
             return false;
         }
         return true;

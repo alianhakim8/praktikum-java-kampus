@@ -15,7 +15,7 @@ public class FileApp {
         try {
             fileName = br.readLine();
             System.out.println("Now reading from " + fileName + "...");
-            FileInputStream fis = null;
+            FileInputStream fis;
             fis = new FileInputStream(fileName);
             char data;
             int temp;
@@ -23,7 +23,7 @@ public class FileApp {
                 temp = fis.read();
                 data = (char) temp;
                 if (temp != -1) {
-                    System.out.println(data);
+                    System.out.print(data);
                 }
             } while (temp != -1);
         } catch (IOException e) {
@@ -40,7 +40,7 @@ public class FileApp {
         try {
             filename = br.readLine();
             System.out.println("Enter data to write to " + filename + "...");
-            FileOutputStream fos = null;
+            FileOutputStream fos;
             fos = new FileOutputStream(filename);
             do {
                 data = br.read();
